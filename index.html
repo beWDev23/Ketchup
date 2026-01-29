@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Be My Valentine 💘</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffe6f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #d6336c;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #adb5bd;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Will you be my Valentine? 💖</h1>
+    <div class="buttons">
+      <button id="yesBtn" onclick="sayYes()">Yes 💕</button>
+      <button id="noBtn" onclick="sayNo()">No 💔</button>
+    </div>
+  </div>
+
+  <script>
+    let yesSize = 18;
+
+    function sayNo() {
+      yesSize += 8;
+      const yesBtn = document.getElementById("yesBtn");
+      yesBtn.style.fontSize = yesSize + "px";
+      yesBtn.style.padding = (12 + yesSize / 4) + "px " + (24 + yesSize / 2) + "px";
+    }
+
+    function sayYes() {
+      document.body.innerHTML = `
+        <div style="text-align:center;">
+          <h1 style="color:#ff4d6d;">YAY!!! 💘💘💘</h1>
+          <p style="font-size:24px;">Best Valentine ever 😍</p>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
